@@ -9,6 +9,7 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        coa     = !git add -A && git commit -m
 [color]
         diff = auto
         status = auto
@@ -32,7 +33,9 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [credential]
-	helper = osxkeychain
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 [diff "spaceman-diff"]
   command = /opt/homebrew/bin/spaceman-diff
 

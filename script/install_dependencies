@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# install custom dependencies
+
+echo ''
+
+info () {
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+info "installing custom dependencies for dotfiles"
+
+# install oh-my-zsh
+info "› installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install bc - An arbitrary precision calculator language
+info "› installing bc"
+sudo apt install bc

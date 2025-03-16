@@ -40,11 +40,11 @@ done
 
 unset config_files
 
-# Better history
-# Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+# load oh my zsh
+# we do this last from `zsh/ohmyzsh/` subfolder since
+# omz needs the ZSH variable set to something different than this script, which sucks
+# to avoid issues we do the following: 
+# * initialize all from abofe script (which only loads files with ending `.zsh`)
+# * load `zsh/oh-my-zsh.sh` shell script which then can safely overwrite the `ZSH` variable
+source zsh/oh-my-zsh.sh
+
